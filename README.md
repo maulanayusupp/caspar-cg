@@ -6,7 +6,7 @@
 3. Install necessary php dependencies: `php composer.phar install` or `composer install (if composer already installed on your machine)`.
 4. Configure directories access rights.
     - directories within the `storage` and the `bootstrap/cache` directories should be writable by your web server.
-    - create a symbolic link at `public/storage` which points to the `storage/app/public` directory.
+    - Writable command `sudo chgrp -R www-data storage bootstrap/cache` and `sudo chmod -R ug+rwx storage bootstrap/cache`.
 5. Configure your database, create user and db for this project `optional`.
 6. Create `.env` with all necessary environment variables.
     - use `.env.example` for reference to fill all the settings including db, mail, memcached, etc.
